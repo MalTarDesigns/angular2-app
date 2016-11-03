@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+
+
+<button 
+    *ngIf="!isAddingNewPerson" 
+    (click)="isAddingNewPerson = !isAddingNewPerson" 
+    class="btn btn-default">
+    
+    Add a new person  
+    
+</button>
+
+<new-person 
+    *ngIf="isAddingNewPerson" 
+    (onSubmitted)="onSubmit($event)" 
+    (onCancel)="isAddingNewPerson = false">
+
+</new-person>
+
+
+
+        </div><!--/ .col -->
+    </div><!--/ .row -->
+</div><!--/ .container -->
+
+<hr>
+
+<profile [person] = 'person' *ngFor="let person of people"></profile>
+
+

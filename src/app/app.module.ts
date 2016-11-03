@@ -5,14 +5,25 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+//Modules - these get put in the imports section
+import {PeopleModule } from './people';
+
+//Components
+import { HeroesComponent } from './heroes';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent,
+   
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    PeopleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

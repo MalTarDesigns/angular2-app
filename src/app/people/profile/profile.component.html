@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 user-profile">
+      <div class="avatar">
+        <img class="img-responsive profile-pic" src="{{person.pic}}" alt="Profile pic">
+      </div>
+      <div class="profile">
+        <span><strong>{{person.name}}</strong>
+          <p>{{person.status}}<p>
+        </span>
+        <a *ngIf="person.website" href="{{person.website.url}}" class="website">{{person.website.name}}</a>
+        <a *ngIf="person.instagram" href="{{person.instagram.url}}" class="instagram">{{person.instagram.name}}</a>   
+      </div>
+    </div>
+  </div>
+</div>
